@@ -1,0 +1,36 @@
+INSTALL REQUIREMENTS
+  prerequisites: perl
+
+
+RTL2GDSHOME ENVIRONMENT VARIABLE NEEDS TO BE SET
+  The tool will be installed in the path $RTL2GDSHOME
+
+
+INSTALL FLOW FOR BUILDING rtl2gds utility
+Typical way to install rtl2gds : (bash shell)
+
+   export RTL2GDSHOME=/usr/bin
+   make
+   make install
+   export PATH=$RTL2GDSHOME:$PATH
+   export MANPATH=$RTL2GDSHOME:$MANPATH
+
+
+RUNNING rtl2gds
+Typical way to run rtl2gds : (bash shell)
+
+   export RTL2GDSHOME=/usr/bin
+   rtl2gds <options> -genScr=physical_design
+   cd physical_design
+   rtl2gds -syn <options>
+
+See rtl2gds -help for detailed options list
+
+
+UNINSTALL rtl2gds
+RTL2GDSHOME ENVIRONMENT VARIABLE NEEDS TO BE SET
+Typical way to uninstall rtl2gds : (bash shell)
+  
+   export RTL2GDSHOME=/usr/bin
+   make uninstall
+

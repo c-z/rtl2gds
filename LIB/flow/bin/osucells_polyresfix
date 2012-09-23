@@ -1,0 +1,15 @@
+#!/bin/csh
+#  This is a tool to convert the polysilicon resistor in a .ext file
+#  It really comes out as a fet and has to be converted into a resist line
+#
+#   Johannes Grad, IIT
+#
+
+foreach name ($argv)
+ echo "Processing $name..." 
+ mv $name $name.orig.ext
+ awk ' {if ($2=="polyResistor") {print "resist " $13 " " $16 " 100";} else {print;}}' $name.orig.ext | sed "s/hpfet/pfet/g" | sed "s/hnfet/nfet/g" >$name
+ /usr/bin/rm -f $name.orig.ext
+end
+
+

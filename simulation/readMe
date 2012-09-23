@@ -1,0 +1,16 @@
+simulation parent directory. 
+----------------------------
+The directory structure is organised as follows.
+1. tb -> The testbench code is kept in this directory.
+2. vcd -> vcd dump is redirected here.
+3. run -> ModelSim tool run directory.
+	  ModelSim scripts (do files).
+
+How to run Simulation manually
+------------------------------
+1. "./run/simulate.do" is the main script called in modelsim.
+   edit the library files and testbench path in simulate.do
+   if needed, edit the vcd generation directory and name.
+2. "./run/run_sim.bash" is the run script
+
+  

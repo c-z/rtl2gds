@@ -1,0 +1,137 @@
+This version requires license using cdslmd daemon.
+Checking out Encounter license ...
+SOC_Encounter_GPS 6.2 license checkout succeeded.
+INFO: OA features are disabled in this session.
+Starting console server on port vlsi33.vlsi.ee.iitb.ac.in:8888 ..
+sourcing /cad/SOC_6.2/tools.lnx86/fe/etc/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2007.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v06.20-p006_1 (32bit) 01/29/2007 21:55 (Linux 2.4)
+@(#)CDS: NanoRoute v06.20-p009 NR070127-0950/USR45-UB (database version 2.30, 45.1.0) {superthreading v1.6}
+@(#)CDS: CeltIC v06.20-p007_1 (32bit) 01/17/2007 22:29:02 (Linux 2.4.21-37.ELsmp)
+@(#)CDS: CTE v06.20-p008_1 (32bit) Jan 25 2007 03:39:44 (Linux 2.4.21-37.ELsmp)
+--- Starting "First Encounter v06.20-p006_1" on Mon Jan 10 20:12:39 (mem=59.5M) ---
+--- Running on vlsi33 (x86_64 w/Linux 2.6.9-22.ELsmp) ---
+This version was compiled on Mon Jan 29 21:55:17 PST 2007.
+Set DBUPerIGU to 1000.
+Set Default Mode Capacitance Scale Factor to 1.00
+Set Detail Mode Capacitance Scale Factor to 1.00
+Set Coupling Capacitance Scale Factor to 1.00
+Set Resistance Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> help reportTA
+Usage: REPORTTA For Cadence internal use only
+
+<CMD> help report_power
+Usage: report_power [-clock_network {all | {<clock_list>}}]
+                    [-count_seq_elements_in_clock_network]
+                    [-instances {<instance_list>}] [-hierarchy
+                    {all | <hierarchy_level>}] [-cell
+                    {<cell_list>}] [-cell_type {all
+                    | {macro io combinational sequential}}]
+                    [-power_domain {all | {<power_domain_list>}}]
+                    [-format_sequence {internal | switching
+                    | leakage | total | toggle}] [-sort
+                    {internal | switching | leakage
+                    | total}] [-threshold <value>] [-pg_net
+                    {all | {<net_name_list>}}] [-net
+                    [-nworst]] [-outfile <filename>]
+                    [-rail_analysis_format {FE | VS}]
+                    [-clock_domain {all | {<clock_list>}}]
+                    [-view <view_name>]
+
+<CMD> help initECO
+Usage: initeco For Cadence internal use only
+
+<CMD> help updatePower
+Usage: updatePower {-vcd <vcdFileName> ]-vcdTop <VCDTopName>]
+                   [-start <time>] [-end <time>]   
+                   [-timeUnit <unit>] [-noTop]  | -preCTS
+                       -toggleFile <toggleFileName>
+                       [-expectedPower <power>]  | -postCTS
+                       -toggleFile <toggleFileName>
+                       [-expectedPower <power>]  | -toggleProb
+                   <probability>     -clockRate <clockrate>
+                       [-expectedPower   <power>]  
+                   | -estimate <filename>}  | -totalPower
+                   <value> ]-readInstancePower <fileName>]{-noRailAnalysis
+                   | -pad <padFileList>}[-temperature
+                   <degreesCelsius>] [-mode {floorplan
+                   | layout}] [-irDropAnalysis {average
+                   | peak}] [-report <fileName>] [-reportInstanceVoltage
+                   <fileName>] [-reportInstancePower
+                   <fileName>] [-reportRailAnalysis
+                   <fileName>] [-reportNetPower <fileName>]
+                   [-biasVoltage <volts>] [-isSignal]
+                   [-reportDCSourceCurrent <fileName>]
+                   [-reportUnclockedInstances <fileName>]
+                   [-readBlockPinCurrent <fileName>]
+                   [-readCellPower <cellPowerFileName>]
+                   [-readPackageModel <packageModelFile>]
+                   [-readPackageTerminalMapping <packageTerminalMappingFile>]
+                   [-readPadResistance <padResistanceFile>]
+                   [-readPwrGatingCell <powerGatingFile>]
+                   [-group <netsList>] [-tcf <tcfFileName>]
+                   [-preCTS | -postCTS | -clockRate
+                   <clockrate> | -toggleProb <prob>]
+                   <powerNetNames>
+
+<CMD> restoreDesign ../op_data/counter.dat.dat counter
+<CMD> restoreDesign ../op_data/counter.dat.dat counter
+<CMD> restoreDesign /home/users/arunc/academics/vlsi_lab/project1/pnr/op_data/counter.dat.dat/
+<CMD> restoreDesign /home/users/arunc/academics/vlsi_lab/project1/pnr/op_data/counter.dat.dat 1
+<CMD> restoreDesign /home/users/arunc/academics/vlsi_lab/project1/pnr/op_data/counter.dat.dat counter
+Reading config file - /home/users/arunc/academics/vlsi_lab/project1/pnr/op_data/counter.dat.dat/counter.conf
+**ERROR: (SOCSYT-16038):	'../op_data/counter.dat.dat/counter.v' not found.
+Loading Lef file ../../LIB/lib/tsmc018/lib/osu018_stdcells.lef...
+**WARN: (SOCLF-108):	There is no overlap layer defined in any lef file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 800.
+Initializing default via types and wire widths ...
+
+Power Planner/ViaGen version 6.2.2 promoted on 11/03/2006.
+viaInitial starts at Mon Jan 10 20:24:28 2011
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN1 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN2 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN3 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN4 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN5 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN6 GENERATE
+viaInitial ends at Mon Jan 10 20:24:28 2011
+**ERROR: (SOCSYT-16038):	'../op_data/counter.dat.dat/counter.v' not found.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+
+*** Memory Usage v0.114.2.3 (Current mem = 167.000M, initial mem = 59.520M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=167.0M) ***
+ERROR (SOCDB-0100): Cell counter not found.
+**ERROR: (SOCVL-904):	Can't set top cell to "counter" because it doesn't exist.  Exiting Encounter!
+
+*** Memory Usage v0.114.2.3 (Current mem = 167.000M, initial mem = 59.520M) ***
+--- Ending "First Encounter" (totcpu=0:00:02.9, real=0:12:10, mem=167.0M) ---

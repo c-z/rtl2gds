@@ -1,0 +1,72 @@
+
+PnR parent directory. ( Applicable to Encounter version 8.1 ONLY )
+------------------------------------------------------------------
+The directory structure is organised as follows.
+1. logs -> All logs of the pnr runs are redirected here.
+2. op_data -> Results of the pnr runs are saved here.
+3. reports -> Reports of the pnr runs are redirected here.
+4. run  -> run scripts/other exectuables.
+5. scripts  -> Directory for all tcl/perl scripts.
+6. tmp -> temporary directory to save intermediate results, calculations etc.
+7. ip_data -> extra input files.
+8. conf -> Encounter initial configuration script is kept in this folder.
+
+How to run PnR manually ( Floorplan, Placement, CTS and Route )
+------------------------------------------------------
+1. "./scripts/pnr.tcl" is the main tcl script called by encounter.
+   Inside "./scripts/pnr.tcl" 
+	  1. edit the variable "toplevel" based on the design in "./scripts/pnr.tcl" 
+	  2. edit "./conf/encounter.conf", if needed.
+             The conf points to netlist, sdc (timing constraints written out in 
+	     synthesis session), library files ( .tlf, .lef ) and various other 
+	     initialisation options like footprint, rtl-language etc.
+	  3. edit "./scripts/pnr.tcl" to change all the default options like
+             floorplan aspect ratio, power-stripe width etc.
+
+2. Run script is "./run/run_pnr.bash"
+   Usage:
+   terminal$ source run_pnr.bash OR
+   terminal$ ./run_pnr.bash
+
+3. By default the "./run/run_pnr.bash" redirects the log of the run to "./logs/" directory.
+
+4. By default all the reports are generated in "./reports/" directory.
+   Various reports generated are
+	   1. design/timing reports, 
+	         1. "./reports/1.place_${toplevel}/*.rpt", includes area, timing, fanout/cap 
+		    reports at PLACMENT stage.
+		 2. "./reports/2.preCTS_${toplevel}/*.rpt", includes area, timing, fanout/cap 
+		    reports at PLACMENT-OPT ( Before CTS, with ideal timing ) stage.
+		 3. "./reports/3.postCTS_${toplevel}/*.rpt", includes area, timing, fanout/cap 
+		    reports after CTS is done.
+		 4. "./reports/4.postCTSOpt_${toplevel}/*.rpt", includes area, timing, fanout/cap 
+		    reports at CTS-OPT stage. ( Optimisation taking into consideration cts-skew 
+		    and actual clock-insertion delay )
+		 5. "./reports/5.postRouteOpt_${toplevel}/*.rpt", includes area, timing, fanout/cap 
+		    reports after ROUTE-OPT stage. ( routing and optimization taking route-wire-length
+		     delay etc taken into consideration )
+
+	   2. CTS reports, "./reports/${toplevel}.ctsrpt", Implemeted CTS strategy report.
+                           "./reports/clockTree.rpt", Implemented clock-tree report.
+                           "./reports/clock_localskew.rpt", Achieved clock-skew report.
+	   3. gateCount reports, "./reports/gateCount.rpt", report on total gateCount/gateArea.
+	   4. summary report -> "./reports/${toplevel}_summary.rpt", 
+	                         report for overall summary of the design.
+	   5. verify report -> "./reports/${toplevel}_verify*.rpt" Geometry/Connectivity reports.
+
+5. By default all the output data are redirected to "./op_data" directory.
+	   1. "./op_data/${toplevel}.dat" -> Final output data encounter database.
+	   2. "./op_data/${toplevel}_final.v" -> Final netlist in verilog format.
+	   3. "./op_data/${toplevel}_final.dspf" -> Final parasitic information in DSPF format.
+	   4. "./op_data/${toplevel}_def.gz" -> Final DEF information.
+	   5. "./op_data/${toplevel}.ctstch" -> CTS spec used for clock-tree-synthesis.
+
+NB: 1. scripts are developed for Cadence SoC Encounter - 8.1 version ONLY.
+       scripts may not be compatible with other versions of encounter.
+    2. Constraints in the form of SDC can be written out from the synthesis stage and provided.
+       This is a more correct approach.
+       However in the current setup original constraints supplied to synthesis are taken through.
+
+
+
+   

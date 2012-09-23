@@ -1,0 +1,13 @@
+
+This directory is actually the "cadence" directory from the FreePDK tarball
+(osu_soc_v2.7.tar.gz). The files in this directory are known to support cadence
+as well as synopsys tools in a mixed flow. For the full or latest set of files,
+download a suitable tarball from the FreePDK website:
+
+ http://vcag.ecen.okstate.edu/projects/scells/download/MOSIS_SCMOS/
+
+For AHIR: Consult OSU_flow/README in your svn checkout.
+
+More instructions available at the following URL:
+
+http://avatar.ecen.okstate.edu/wiki/index.php/Tutorials

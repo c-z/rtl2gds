@@ -1,0 +1,23 @@
+PnR parent directory. ( Power calculation based on VCD is also done using Encounter )
+-------------------------------------------------------------------------------------
+Applicable to Encounter version 8.1 ONLY
+----------------------------------------
+
+How to run Power Calculation manually.
+-------------------------------------
+1. "./scripts/power.tcl" is the main tcl script called by encounter.
+     1. edit the variable "toplevel" based on the design in "./scripts/pnr.tcl" 
+     2. edit the encounter-database filename.
+     3. point to proper activity file.
+
+2. Run script is "./run/run_power.bash"
+      Usage:
+      terminal$ source run_power.bash OR
+      terminal$ ./run_power.bash
+      By default the log file is redirected to "../logs/power.log"
+
+3. All reports are generated in "../reports/" directory.
+      1. "./reports/${toplevel}_*power.rpt" -> includes all power calculation reports.
+
+  
+

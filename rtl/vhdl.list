@@ -1,0 +1,7 @@
+/home/users/TOP/rtl/top.vhd
+
+/home/users/TOP/rtl/dataPath.vhd myLib1
+/home/users/TOP/rtl/controlPath.vhd myLib2
+
+/home/users/TOP/rtl/system.vhd work
+  

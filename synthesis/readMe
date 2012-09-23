@@ -1,0 +1,51 @@
+Synthesis parent directory.
+---------------------------
+The directory structure is organised as follows.
+1. logs -> All logs of the synthesis runs are redirected here.
+2. op_data -> Results of the synthesis runs are saved here.
+3. reports -> Reports of the synthesis runs are redirected here.
+4. run  -> run scripts/other exectuables.
+5. scripts  -> Directory for all tcl/perl scripts.
+6. tmp -> temporary directory to save intermediate results, calculations etc.
+
+How to run synthesis manually
+-----------------------------
+1. "./scripts/compile_dc.tcl" is the main tcl script called by dc_shell
+   Inside "./scripts/compile_dc.tcl" 
+	  1. edit the variables based on the design in "./scripts/compile_dc.tcl" 
+	  ( like clk_uncertainty, clk_freq etc)
+	  2. edit "./scripts/technology.tcl", if needed.
+             The technology libraries (.db designware etc) need to be pointed properly.
+	  3. edit "./scripts/rtl.list". This file points to the rtl files. 
+	     All rtl files need to set as a list variable hdl_files inside "./scripts/rtl.list"
+	  4. edit "./scripts/constraints.tcl" 
+	     This file contains, the design constraints commands.
+	     For eg: clock-defintion, input/output IO delay defintions etc.
+
+2. Run script is "./run/run_dc.bash"
+   Usage:
+   terminal$ source run_dc.bash OR
+   terminal$ ./run_dc.bash
+
+3. By default the "./run/run_dc.bash" redirects the log of the run to "./logs/" directory.
+   Other logs which are generated on succesful completion of the run are
+   "./logs/insert_clock_gating.log" -> log for the clock-gating conversion done during synthesis.
+
+4. By default all the reports are generated in "./reports/" directory.
+   Various reports generated are
+	   1. design reports, "./reports/*design*.rpt" at various stages of the run.
+	   2. timing reports, "./reports/*timing*.rpt", final timing information.
+	   3. DFT reports, "./reports/*scan*.rpt", scan insertion reports.
+	   4. area, cell, power and qor -> reports for total area 
+	      ( normalised area based on .db/.lib, NOT the actual physical area ), 
+	      cells instantiated, power taken and quality of results.
+
+
+
+NB: 1. scripts are developed for Synopsys Design Compiler - 2006-06
+    2. Integrated clock gating cells(ICG) are used in the flow. If not available in the lib, 
+       DC will instantiate the modules using LATCHES and AND cells accrodingly.
+    3. scan insertion and scan stitching done in the script. Script is not tested for proper scan 
+       insertion as scan cells are not available in the library at the time of development.
+
+   

@@ -1,0 +1,7 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Mon Jan 10 20:24:53                     #
+#                                                     #
+#######################################################
+restoreDesign ../op_data/counter.dat.dat counter

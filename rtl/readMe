@@ -1,0 +1,7 @@
+RTL directory.
+-------------
+vhdl.list - template for listing of multiple VHDL source files 
+            organized into different libraries. 
+            See man page for usage.
+Link/Copy all the rtl files in ./code
+./tmp -> for temporary purpose.

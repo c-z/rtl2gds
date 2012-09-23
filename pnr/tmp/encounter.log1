@@ -1,0 +1,247 @@
+This version requires license using cdslmd daemon.
+Checking out Encounter license ...
+SOC_Encounter_GPS 6.2 license checkout succeeded.
+INFO: OA features are disabled in this session.
+Starting console server on port vlsi33.vlsi.ee.iitb.ac.in:8888 ..
+sourcing /cad/SOC_6.2/tools.lnx86/fe/etc/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2007.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v06.20-p006_1 (32bit) 01/29/2007 21:55 (Linux 2.4)
+@(#)CDS: NanoRoute v06.20-p009 NR070127-0950/USR45-UB (database version 2.30, 45.1.0) {superthreading v1.6}
+@(#)CDS: CeltIC v06.20-p007_1 (32bit) 01/17/2007 22:29:02 (Linux 2.4.21-37.ELsmp)
+@(#)CDS: CTE v06.20-p008_1 (32bit) Jan 25 2007 03:39:44 (Linux 2.4.21-37.ELsmp)
+--- Starting "First Encounter v06.20-p006_1" on Mon Jan 10 20:24:47 (mem=59.5M) ---
+--- Running on vlsi33 (x86_64 w/Linux 2.6.9-22.ELsmp) ---
+This version was compiled on Mon Jan 29 21:55:17 PST 2007.
+Set DBUPerIGU to 1000.
+Set Default Mode Capacitance Scale Factor to 1.00
+Set Detail Mode Capacitance Scale Factor to 1.00
+Set Coupling Capacitance Scale Factor to 1.00
+Set Resistance Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> restoreDesign ../op_data/counter.dat.dat counter
+Reading config file - ../op_data/counter.dat.dat/counter.conf
+Loading Lef file ../../LIB/lib/tsmc018/lib/osu018_stdcells.lef...
+**WARN: (SOCLF-108):	There is no overlap layer defined in any lef file
+so you are unable to create rectilinear partition in a hierarchical flow.
+Set DBUPerIGU to M2 pitch 800.
+Initializing default via types and wire widths ...
+
+Power Planner/ViaGen version 6.2.2 promoted on 11/03/2006.
+viaInitial starts at Mon Jan 10 21:06:41 2011
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN1 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN2 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN3 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN4 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN5 GENERATE
+**WARN: (SOCPP-557):	a single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. You should remove this statement from your LEF file.
+	VIARULE TURN6 GENERATE
+viaInitial ends at Mon Jan 10 21:06:41 2011
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../op_data/counter.dat.dat/counter.v'
+
+*** Memory Usage v0.114.2.3 (Current mem = 166.051M, initial mem = 59.520M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=166.1M) ***
+Set top cell to counter.
+Reading common timing library '../../LIB/lib/tsmc018/lib/osu018_stdcells.tlf' ...
+ read 32 cells in library 'osu018_stdcells' 
+*** End library_loading (cpu=0.00min, mem=0.5M, fe_cpu=0.04min, fe_mem=166.5M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Flattening Cell counter ...
+*** Netlist is unique.
+** info: there are 36 modules.
+** info: there are 53 stdCell insts.
+
+*** Memory Usage v0.114.2.3 (Current mem = 166.891M, initial mem = 59.520M) ***
+Reading timing constraint file '/home/users/arunc/academics/vlsi_lab/project/pnr/run/../op_data/counter.dat.dat/counter.pt' ...
+*info: set_input_delay : 11 accepted, 0 skipped!
+*info: set_output_delay : 8 accepted, 0 skipped!
+*info: set_driving_cell : 48 accepted, 0 skipped!
+*info: set_max_transition : 1 accepted, 0 skipped!
+*info: set_clock_uncertainty : 1 accepted, 0 skipped!
+*info: set_propagated_clock : 1 accepted, 0 skipped!
+*info: set_clock_gating_check : 4 accepted, 0 skipped!
+*info: create_clock : 2 accepted, 0 skipped!
+*Info: refer to log file for more detail on skipped constraints if any
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+INFO (CTE): constraints read successfully
+*** Read timing constraints (cpu=0:00:00.1 mem=168.1M) ***
+*info: set bottom ioPad orient R0
+Horizontal Layer M1 offset = 500 (guessed)
+Vertical Layer M2 offset = 400 (derived)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF.
+Set Input Pin Transition Delay as 120 ps.
+Set "buf" cell/footprint to "buf".
+Set "inv" cell/footprint to "inv".
+Set "delay" cell/footprint to "buf".
+Loading preference file ../op_data/counter.dat.dat/enc.pref.tcl ...
+**WARN: (SOCSYT-3046):	Unknown preference name "LogTypeInCmd".
+**WARN: (SOCSYT-3046):	Unknown preference name "HighlightColorNumber".
+**WARN: (SOCSYT-3046):	Unknown preference name "YieldCostMetal".
+**WARN: (SOCSYT-3046):	Unknown preference name "SelectStickyMode".
+**WARN: (SOCSYT-3046):	Unknown preference name "ShowUnplacedInst".
+**WARN: (SOCSYT-3046):	Unknown preference name "zoomPrevCount".
+**WARN: (SOCSYT-3046):	Unknown preference name "noInsideMacro".
+**WARN: (SOCSYT-3046):	Unknown preference name "ShowFPObjInPlace".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapnrStyle".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaptrStyle".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange0".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor0".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange1".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor1".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange2".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor2".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange3".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor3".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange4".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor4".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange5".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor5".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange6".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor6".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange7".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor7".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange8".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor8".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMaprange9".
+**WARN: (SOCSYT-3046):	Unknown preference name "CongestionMapcolor9".
+**WARN: (SOCSYT-3046):	Unknown preference name "InputConnectionColor".
+**WARN: (SOCSYT-3046):	Unknown preference name "OutputConnectionColor".
+**WARN: (SOCSYT-3046):	Unknown preference name "InoutConnectionColor".
+**ERROR: (SOCSYC-174):	Unrecognizable argument -analysisType
+Usage: setAnalysisMode [-skew | -noSkew] [-hold | -setup]
+                       [-warn | -noWarn] [-log | -noLog]
+                       [-clock | -period | -allClockDomain]
+                       [-caseAnalysis | -noCaseAnalysis]
+                       [-clockTree | -noClockTree |
+                       -autoDetectClockTree] [-async
+                       | -noAsync | -asyncOnly] [-clkSrcPath
+                       | -noClkSrcPath] [-moduleIOCstr
+                       | -noModuleIOCstr] [-useDetailRC
+                       | -noUseDetailRC] [-useOutputPinCap
+                       | -noUseOutputPinCap] [-latch
+                       | -noLatch] [-timeBorrowing |
+                       -noTimeBorrowing] [-clockGatingCheck
+                       | -noClockGatingCheck] [-sequentialConstProp
+                       |-noSequentialConstProp] [-usefulSkew
+                       | -noUsefulSkew] [-multipleClockPerRegister
+                       | -noMultipleClockPerRegister]
+                       [-enableMultipleDriveNet | -disableMultipleDriveNet]
+                       [-single | -bcWc | -onChipVariation]
+                       [-cppr | -nocppr] [-timingSelfLoopsSkew
+                       | -timingSelfLoopsNoSkew] [-markClkNetsBeforeConstProp
+                       | -markClkNetsAfterConstProp]
+                       [-noPropSlew] [-honorCDTV | -noHonorCDTV]
+
+**ERROR: (SOCSYT-6262):	ERROR: Incorrect usage for command "setAnalysisMode". while loading mode file ../op_data/counter.dat.dat/counter.mode
+Reading floorplan file - ../op_data/counter.dat.dat/counter.fp (mem = 168.4M).
+Set FPlanBox to (0 0 160900 140000)
+Horizontal Layer M1 offset = 500 (guessed)
+Vertical Layer M2 offset = 400 (derived)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Data section 'IOPins—' is not supported.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** End loading floorplan (cpu = 0:00:00.0, mem = 168.4M) ***
+loading place ...
+Reading placement file - ../op_data/counter.dat.dat/counter.place.gz.
+Reading stdCellPlacement "../op_data/counter.dat.dat/counter.place.gz" ...
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=168.5M) ***
+Total net length = 1.889e+03 (8.615e+02 1.028e+03) (ext = 1.148e+03)
+loading route ...
+Reading routing file - ../op_data/counter.dat.dat/counter.route.gz.
+Reading Cadence  routing data (Created by First Encounter v08.10-p004_1 on Sat Oct 30 20:13:30 2010 Format: 7.0)...
+Wire Format version = 7.000 is more recent than 6.2.
+This file was probably created by a more recent version of this product.
+**ERROR: (SOCSYC-1814):	Aborting restore wires from file "../op_data/counter.dat.dat/counter.route.gz"
+
+Reading clock tree spec file '../op_data/counter.dat.dat/counter.ctstch' ...
+
+RouteType               : FE_CTS_DEFAULT
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+Est. Cap                : 0.14647(V=0.14945 H=0.14349) (ff/um) [0.00014647]
+Est. Res                : 0.25(V=0.233333 H=0.266667)(ohm/um) [0.00025]
+Est. Via Res            : 4(ohm) [8]
+Est. Via Cap            : 0(ff)
+M1(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.267(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.3(um) s=0.3(um) p=0.8(um) es=1.3(um) cap=0.149(ff/um) res=0.267(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M3(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.267(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M4(V) w=0.3(um) s=0.3(um) p=0.8(um) es=1.3(um) cap=0.149(ff/um) res=0.233(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M5(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.233(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M6(V) w=0.5(um) s=0.5(um) p=1.6(um) es=2.7(um) cap=0.133(ff/um) res=0.06(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+
+RouteType               : FE_CTS_DEFAULT_LEAF
+PreferredExtraSpace     : 1
+Shield                  : NONE
+PreferLayer             : M3 M4 
+Est. Cap                : 0.14647(V=0.14945 H=0.14349) (ff/um) [0.00014647]
+Est. Res                : 0.25(V=0.233333 H=0.266667)(ohm/um) [0.00025]
+Est. Via Res            : 4(ohm) [8]
+Est. Via Cap            : 0(ff)
+M1(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.267(ohm/um) viaRes=0(ohm) viaCap=0(ff)
+M2(V) w=0.3(um) s=0.3(um) p=0.8(um) es=1.3(um) cap=0.149(ff/um) res=0.267(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M3(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.267(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M4(V) w=0.3(um) s=0.3(um) p=0.8(um) es=1.3(um) cap=0.149(ff/um) res=0.233(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M5(H) w=0.3(um) s=0.3(um) p=1(um) es=1.7(um) cap=0.143(ff/um) res=0.233(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+M6(V) w=0.5(um) s=0.5(um) p=1.6(um) es=2.7(um) cap=0.133(ff/um) res=0.06(ohm/um) viaRes=4(ohm) viaCap=0(ff)
+
+
+****** AutoClockRootPin ******
+AutoClockRootPin 1: clk
+# NoGating         NO
+# SetDPinAsSync    NO
+# SetIoPinAsSync   NO
+# RouteClkNet      NO
+# PostOpt          YES
+# RouteType        FE_CTS_DEFAULT
+# LeafRouteType    FE_CTS_DEFAULT_LEAF
+
+***** !! NOTE !! *****
+
+CTS treats D-pins and I/O pins as non-synchronous pins by default.
+If you want to change the behavior, you need to use the SetDPinAsSync
+or SetIoPinAsSync statement in the clock tree specification file,
+or use the setCTSMode -setDPinAsSync | -noSetDPinAsSync command,
+or use the setCTSMode -setIoPinAsSync | -noSetIoPinAsSync command
+before specifyClockTree command.
+
+*** End specifyClockTree (cpu=0:00:00.0, real=0:00:00.0, mem=173.8M) ***
+**ERROR: (SOCSYT-6260):	 while loading file ../op_data/counter.dat.dat/counter.globals
+
+*** Memory Usage v0.114.2.3 (Current mem = 173.766M, initial mem = 59.520M) ***
+--- Ending "First Encounter" (totcpu=0:00:02.3, real=0:42:26, mem=173.8M) ---
